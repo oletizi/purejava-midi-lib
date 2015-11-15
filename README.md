@@ -1,6 +1,9 @@
 Android MIDI Library
 =============
 
+This is a fork of https://github.com/LeffelMania/android-midi-lib to mavenize it.
+
+
 This project is mainly for use with Android applications that do not have access to Java's javax.sound.midi library. However, it is a stand-alone Java library with no Android-specific dependencies or considerations.
 
 This code provides an interface to read, manipulate, and write MIDI files. "Playback" is supported as a real-time event dispatch system. This library does NOT include actual audio playback or device interfacing.

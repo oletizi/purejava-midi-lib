@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.leff.midi</groupId>
+    <artifactId>android-midi-lib</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+
+    <name>android-midi-lib</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>audiogen</id>
+            <url>scp://artpopmu@artpopmusic.com:/home4/artpopmu/www/audiogen/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+    <build>
+        <sourceDirectory>src/</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh</artifactId>
+                <version>2.9</version>
+            </extension>
+        </extensions>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>audiogen</id>
+            <name>The audiogen custom repo.</name>
+            <url>http://audiogen.orionletizi.com/maven2/</url>
+        </repository>
+    </repositories>
+</project>
